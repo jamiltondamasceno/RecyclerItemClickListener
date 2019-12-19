@@ -1,12 +1,11 @@
 package com.aula.recyclerview;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
-
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by Jamilton
@@ -14,7 +13,7 @@ import android.widget.AdapterView;
  * Você precisa escrever sua própria classe que se estende RecyclerView.OnItemTouchListener .
  */
 
-public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListener {
+public class ClickListener implements RecyclerView.OnItemTouchListener {
 
     private OnItemClickListener mListener;
     GestureDetector mGestureDetector;
@@ -45,7 +44,7 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
         public void onLongItemClick(View view, int position);
     }
 
-    public RecyclerItemClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) {
+    public ClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) {
         mListener = listener;
         mGestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
@@ -64,3 +63,4 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 
     }
 }
+
