@@ -1,5 +1,3 @@
-package com.aula.recyclerview;
-
 import android.content.Context;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -44,7 +42,7 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
         public void onLongItemClick(View view, int position);
     }
 
-    public ClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) {
+    public RecyclerItemClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) {
         mListener = listener;
         mGestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
@@ -63,4 +61,3 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 
     }
 }
-
